@@ -1,7 +1,4 @@
-//
-// This is only a SKELETON file for the "Bob" exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+// http://exercism.io/submissions/03347c26aac04a90b2c0743b4401074d
 
 var Bob = function() {};
 
@@ -21,5 +18,4 @@ String.prototype.containsOnlyNumbers = function() {
 	return this.match(/[^0-9~`@#$%^&.*()<>,;:"/\ !?[\\]/) === null;
 }
 
-console.log('    '.replace(/ /g, '') === '');
 module.exports = Bob;
