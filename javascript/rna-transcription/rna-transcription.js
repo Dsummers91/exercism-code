@@ -1,20 +1,17 @@
 var DnaTranscriber = function() {
-	this.toRna = function(nucleotides) {
-		nucleotides = nucleotides.split('');
-		var Complement = [];
-		for (var i = 0, length=nucleotides.length; i < length; i++) {
-			Complement.push(getComplement(nucleotides[i]));
-		}
-		return Complement.join('');
+}
+
+DnaTranscriber.prototype.toRna = function(nucleotides) {
+	nucleotides = nucleotides.split('');
+	var ComplementArray = [];
+	for (var i = 0, length=nucleotides.length; i < length; i++) {
+		if(nucleotides[i]==='A') Complement = 'U';
+		if(nucleotides[i]==='C') Complement = 'G';
+		if(nucleotides[i]==='T') Complement = 'A';
+		if(nucleotides[i]==='G') Complement = 'C';
+		ComplementArray.push(Complement);
 	}
-}
-
-function getComplement(nucleotide) {
-	if(nucleotide==='A') return 'U';
-	if(nucleotide==='C') return 'G';
-	if(nucleotide==='T') return 'A';
-	if(nucleotide==='G') return 'C';
-
-}
+	return ComplementArray.join('');
+};
 
 module.exports = DnaTranscriber;
